@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - BooksVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Books<span>Vooks</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html" class="active">Browse Books</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="browse-hero">
+        <div class="container">
+            <h1>Find Your Perfect Book</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by title, author, subject, or course...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="browse-content">
+        <div class="container">
+            <div class="browse-layout">
+                <!-- Filters Sidebar -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <h3>Listing Type</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="listing-type" value="rent" checked>
+                                <span>For Rent</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="listing-type" value="sale" checked>
+                                <span>For Sale</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="textbooks">
+                                <span>Textbooks</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="notes">
+                                <span>Notes & Study Materials</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="novels">
+                                <span>Novels & Fiction</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="reference">
+                                <span>Reference Books</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="entrance">
+                                <span>Entrance Exam Books</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Condition</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="new">
+                                <span>New</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="like-new">
+                                <span>Like New</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="good">
+                                <span>Good</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="fair">
+                                <span>Fair</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="2000" value="1000" class="slider" id="price-range">
+                            <div class="price-values">
+                                <span>₹0</span>
+                                <span id="price-value">₹1000</span>
+                                <span>₹2000+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Location</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="north-campus">
+                                <span>North Campus</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="south-campus">
+                                <span>South Campus</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="east-campus">
+                                <span>East Campus</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="west-campus">
+                                <span>West Campus</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="off-campus">
+                                <span>Off Campus</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary apply-filters">Apply Filters</button>
+                    <button class="btn btn-secondary clear-filters">Clear All</button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results">
+                    <div class="results-header">
+                        <div class="results-count">
+                            Showing <span>24</span> results
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="relevance">Relevance</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="book-grid">
+                        <!-- Book Card 1 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book1.jpg" alt="Book cover">
+                                <div class="book-tag rent">For Rent</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>Calculus: Early Transcendentals</h3>
+                                <p class="book-author">James Stewart</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                                    <span><i class="fas fa-check-circle"></i> Like New</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> North Campus</span>
+                                </div>
+                                <p class="book-price">₹350/month</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.5)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 2 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book2.jpg" alt="Book cover">
+                                <div class="book-tag sale">For Sale</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>Introduction to Algorithms</h3>
+                                <p class="book-author">Thomas H. Cormen</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                                    <span><i class="fas fa-check-circle"></i> Good</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> South Campus</span>
+                                </div>
+                                <p class="book-price">₹800</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(4.0)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 3 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book3.jpg" alt="Book cover">
+                                <div class="book-tag rent">For Rent</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>Physics for Scientists and Engineers</h3>
+                                <p class="book-author">Serway & Jewett</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                                    <span><i class="fas fa-check-circle"></i> Good</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> East Campus</span>
+                                </div>
+                                <p class="book-price">₹400/month</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(5.0)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 4 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book4.jpg" alt="Book cover">
+                                <div class="book-tag sale">For Sale</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>Organic Chemistry</h3>
+                                <p class="book-author">Paula Y. Bruice</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                                    <span><i class="fas fa-check-circle"></i> Fair</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> West Campus</span>
+                                </div>
+                                <p class="book-price">₹650</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(3.5)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 5 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book5.jpg" alt="Book cover">
+                                <div class="book-tag rent">For Rent</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>Data Structures and Algorithms</h3>
+                                <p class="book-author">Robert Lafore</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                                    <span><i class="fas fa-check-circle"></i> Good</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> North Campus</span>
+                                </div>
+                                <p class="book-price">₹300/month</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(4.0)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 6 -->
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/book6.jpg" alt="Book cover">
+                                <div class="book-tag sale">For Sale</div>
+                            </div>
+                            <div class="book-info">
+                                <h3>The Alchemist</h3>
+                                <p class="book-author">Paulo Coelho</p>
+                                <div class="book-meta">
+                                    <span><i class="fas fa-bookmark"></i> Novels & Fiction</span>
+                                    <span><i class="fas fa-check-circle"></i> Like New</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Off Campus</span>
+                                </div>
+                                <p class="book-price">₹250</p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.5)</span>
+                                </div>
+                                <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <span>...</span>
+                            <a href="#">8</a>
+                        </div>
+                        <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Book<span>Vook</span></h2>
+                <p>Share Knowledge, Save Money</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="sell.html">Sell</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Email: contact@booksvooks.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BooksVooks. All rights reserved.</p
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Browse Page Styles */
+
+/* Hero Section */
+.browse-hero {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.browse-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.browse-hero .search-bar {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Browse Content Layout */
+.browse-content {
+    padding: 60px 0;
+}
+
+.browse-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+/* Filters */
+.filters {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+}
+
+.filter-group:last-of-type {
+    border-bottom: none;
+}
+
+.filter-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.filter-option span {
+    font-size: 0.95rem;
+}
+
+/* Price Range Slider */
+.price-slider {
+    padding: 10px 0;
+}
+
+.price-slider input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.apply-filters, .clear-filters {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.clear-filters {
+    margin-top: 15px;
+}
+
+/* Results Section */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.results-count {
+    font-weight: 500;
+}
+
+.results-count span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options label {
+    font-size: 0.95rem;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid #d1d5db;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.book-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.book-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.view-details {
+    margin-top: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.pagination-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.pagination-btn.prev {
+    margin-right: 15px;
+}
+
+.pagination-btn.next {
+    margin-left: 15px;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-numbers a, .page-numbers span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--dark-color)

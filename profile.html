@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - BooksVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Books<span>Vooks</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="profile.html" class="btn btn-login active">My Profile</a>
+                <a href="index.html" class="btn btn-signup">Logout</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Profile Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="profile-info">
+                        <div class="profile-avatar">
+                            <img src="images/avatar-placeholder.jpg" alt="User Avatar">
+                            <div class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <h2>Rahul Sharma</h2>
+                        <p class="user-institution">Delhi University</p>
+                        <div class="user-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                    </div>
+                    <div class="profile-nav">
+                        <ul>
+                            <li class="active" data-tab="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </li>
+                            <li data-tab="my-listings">
+                                <i class="fas fa-book"></i>
+                                <span>My Listings</span>
+                            </li>
+                            <li data-tab="rentals">
+                                <i class="fas fa-handshake"></i>
+                                <span>My Rentals</span>
+                            </li>
+                            <li data-tab="transactions">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transactions</span>
+                            </li>
+                            <li data-tab="messages">
+                                <i class="fas fa-envelope"></i>
+                                <span>Messages</span>
+                                <span class="badge">3</span>
+                            </li>
+                            <li data-tab="settings">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- Dashboard Tab -->
+                    <div class="profile-tab active" id="dashboard">
+                        <h2>Dashboard</h2>
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>5</h3>
+                                    <p>Books Listed</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>3</h3>
+                                    <p>Active Rentals</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-rupee-sign"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>₹1,250</h3>
+                                    <p>Total Earnings</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>4.5</h3>
+                                    <p>Rating</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-activity">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon rent">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Rented "Calculus: Early Transcendentals"</h4>
+                                        <p>You rented this book from Priya Patel for 3 months</p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon sale">
+                                        <i class="fas fa-rupee-sign"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Sold "Introduction to Algorithms"</h4>
+                                        <p>You sold this book to Amit Kumar for ₹800</p>
+                                        <span class="activity-time">1 week ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon listing">
+                                        <i class="fas fa-plus-circle"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Listed "Organic Chemistry"</h4>
+                                        <p>You listed this book for sale at ₹650</p>
+                                        <span class="activity-time">2 weeks ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My Listings Tab -->
+                    <div class="profile-tab" id="my-listings">
+                        <div class="tab-header">
+                            <h2>My Listings</h2>
+                            <a href="sell.html" class="btn btn-primary">Add New Listing</a>
+                        </div>
+                        <div class="listings-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="sale">For Sale</button>
+                            <button class="filter-btn" data-filter="rent">For Rent</button>
+                            <button class="filter-btn" data-filter="both">Both</button>
+                        </div>
+                        <div class="listings-grid">
+                            <!-- Listing Card 1 -->
+                            <div class="listing-card">
+                                <div class="listing-image">
+                                    <img src="images/book2.jpg" alt="Book cover">
+                                    <div class="listing-tag sale">For Sale</div>
+                                </div>
+                                <div class="listing-info">
+                                    <h3>Introduction to Algorithms</h3>
+                                    <p class="listing-meta">Listed on: May 15, 2023</p>
+                                    <p class="listing-price">₹800</p>
+                                    <div class="listing-status active">
+                                        <span>Active</span>
+                                    </div>
+                                    <div class="listing-actions">
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon mark-sold"><i class="fas fa-check-circle"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Listing Card 2 -->
+                            <div class="listing-card">
+                                <div class="listing-image">
+                                    <img src="images/book4.jpg" alt="Book cover">
+                                    <div class="listing-tag sale">For Sale</div>
+                                </div>
+                                <div class="listing-info">
+                                    <h3>Organic Chemistry</h3>
+                                    <p class="listing-meta">Listed on: May 10, 2023</p>
+                                    <p class="listing-price">₹650</p>
+                                    <div class="listing-status active">
+                                        <span>Active</span>
+                                    </div>
+                                    <div class="listing-actions">
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon mark-sold"><i class="fas fa-check-circle"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Listing Card 3 -->
+                            <div class="listing-card">
+                                <div class="listing-image">
+                                    <img src="images/book1.jpg" alt="Book cover">
+                                    <div class="listing-tag rent">For Rent</div>
+                                </div>
+                                <div class="listing-info">
+                                    <h3>Calculus: Early Transcendentals</h3>
+                                    <p class="listing-meta">Listed on: April 28, 2023</p>
+                                    <p class="listing-price">₹350/month</p>
+                                    <div class="listing-status rented">
+                                        <span>Rented Out</span>
+                                    </div>
+                                    <div class="listing-actions">
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                        <button class="btn-icon mark-available"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My Rentals Tab -->
+                    <div class="profile-tab" id="rentals">
+                        <h2>My Rentals</h2>
+                        <div class="rentals-tabs">
+                            <button class="rental-tab active" data-rental-tab="current">Current Rentals</button>
+                            <button class="rental-tab" data-rental-tab="history">Rental History</button>
+                        </div>
+                        
+                        <!-- Current Rentals -->
+                        <div class="rental-content active" id="current">
+                            <div class="rental-cards">
+                                <!-- Rental Card 1 -->
+                                <div class="rental-card">
+                                    <div class="rental-image">
+                                        <img src="images/book1.jpg" alt="Book cover">
+                                    </div>
+                                    <div class="rental-info">
+                                        <h3>Calculus: Early Transcendentals</h3>
+                                        <p class="rental-owner">From: Priya Patel</p>
+                                        <div class="rental-details">
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Rented On:</span>
+                                                <span class="detail-value">May 20, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Return By:</span>
+                                                <span class="detail-value">August 20, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Monthly Fee:</span>
+                                                <span class="detail-value">₹350</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Deposit:</span>
+                                                <span class="detail-value">₹1,000</span>
+                                            </div>
+                                        </div>
+                                        <div class="rental-status">
+                                            <div class="status-label active">Active</div>
+                                            <div class="days-remaining">62 days remaining</div>
+                                        </div>
+                                        <div class="rental-actions">
+                                            <button class="btn btn-secondary">Contact Owner</button>
+                                            <button class="btn btn-primary">Extend Rental</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Rental Card 2 -->
+                                <div class="rental-card">
+                                    <div class="rental-image">
+                                        <img src="images/book3.jpg" alt="Book cover">
+                                    </div>
+                                    <div class="rental-info">
+                                        <h3>Physics for Scientists and Engineers</h3>
+                                        <p class="rental-owner">From: Vikram Singh</p>
+                                        <div class="rental-details">
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Rented On:</span>
+                                                <span class="detail-value">April 15, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Return By:</span>
+                                                <span class="detail-value">July 15, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Monthly Fee:</span>
+                                                <span class="detail-value">₹400</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Deposit:</span>
+                                                <span class="detail-value">₹1,200</span>
+                                            </div>
+                                        </div>
+                                        <div class="rental-status">
+                                            <div class="status-label active">Active</div>
+                                            <div class="days-remaining">26 days remaining</div>
+                                        </div>
+                                        <div class="rental-actions">
+                                            <button class="btn btn-secondary">Contact Owner</button>
+                                            <button class="btn btn-primary">Extend Rental</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rental History -->
+                        <div class="rental-content" id="history">
+                            <div class="rental-cards">
+                                <!-- Past Rental Card -->
+                                <div class="rental-card past">
+                                    <div class="rental-image">
+                                        <img src="images/book5.jpg" alt="Book cover">
+                                    </div>
+                                    <div class="rental-info">
+                                        <h3>Introduction to Psychology</h3>
+                                        <p class="rental-owner">From: Neha Gupta</p>
+                                        <div class="rental-details">
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Rented On:</span>
+                                                <span class="detail-value">January 10, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Returned On:</span>
+                                                <span class="detail-value">April 10, 2023</span>
+                                            </div>
+                                            <div class="rental-detail">
+                                                <span class="detail-label">Total Paid:</span>
+                                                <span class="detail-value">₹900</span>
+                                            </div>
+                                        </div>
+                                        <div class="rental-status">
+                                            <div class="status-label completed">Completed</div>
+                                        </div>
+                                        <div class="rental-actions">
+                                            <button class="btn btn-secondary">View Receipt</button>
+                                            <button class="btn btn-primary">Rent Again</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transactions Tab -->
+                    <div class="profile-tab" id="transactions">
+                        <h2>Transactions</h2>
+                        <div class="transactions-filter">
+                            <div class="filter-group">
+                                <label for="transaction-type">Type:</label>
+                                <select id="transaction-type">
+                                    <option value="all">All Transactions</option>
+                                    <option value="sale">Sales</option>
+                                    <option value="purchase">Purchases</option>
+                                    <option value="rental">Rentals</option>
+                                    <option value="deposit">Deposits</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="transaction-date">Date Range:</label>
+                                <select id="transaction-date">
+                                    <option value="all">All Time</option>
+                                    <option value="month">This Month</option>
+                                    <option value="quarter">Last 3 Months</option>
+                                    <option value="year">This Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="transactions-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Transaction ID</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>May 20, 2023</td>
+                                        <td>TRX-2023-001</td>
+                                        <td>Rental: Calculus: Early Transcendentals</td>
+                                        <td><span class="badge rental">Rental</span></td>
+                                        <td>₹350</td>
+                                        <td><span class="badge status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 20, 2023</td>
+                                        <td>TRX-2023-002</td>
+                                        <td>Security Deposit: Calculus: Early Transcendentals</td>
+                                        <td><span class="badge deposit">Deposit</span></td>
+                                        <td>₹1,000</td>
+                                        <td><span class="badge status pending">Pending Return</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 15, 2023</td>
+                                        <td>TRX-2023-003</td>
+                                        <td>Sale: Introduction to Algorithms</td>
+                                        <td><span class="badge sale">Sale</span></td>
+                                        <td>₹800</td>
+                                        <td><span class="badge status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>April 15, 2023</td>
+                                        <td>TRX-2023-004</td>
+                                        <td>Rental: Physics for Scientists and Engineers</td>
+                                        <td><span class="badge rental">Rental</span></td>
+                                        <td>₹400</td>
+                                        <td><span class="badge status completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>April 15, 2023</td>
+                                        <td>TRX-2023-005</td>
+                                        <td>Security Deposit: Physics for Scientists and Engineers</td>
+                                        <td><span class="badge deposit">Deposit</span></td>
+                                        <td>₹1,200</td>
+                                        <td><span class="badge status pending">Pending Return</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>April 10, 2023</td>
+                                        <td>TRX-2023-006</td>
+                                        <td>Deposit Refund: Introduction to Psychology</td>
+                                        <td><span class="badge refund">Refund</span></td>
+                                        <td>₹900</td>
+                                        <td><span class="badge status completed">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Messages Tab -->
+                    <div class="profile-tab" id="messages">
+                        <h2>Messages</h2>
+                        <div class="messages-container">
+                            <div class="message-sidebar">
+                                <div class="message-search">
+                                    <input type="text" placeholder="Search messages...">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="message-list">
+                                    <div class="message-preview active">
+                                        <div class="message-avatar">
+                                            <img src="images/user1.jpg" alt="User Avatar">
+                                            <span class="status-dot online"></span>
+                                        </div>
+                                        <div class="message-info">
+                                            <h4>Priya Patel</h4>
+                                            <p>Is the book still available for rent?</p>
+                                        </div>
+                                        <div class="message-meta">
+                                            <span class="message-time">10:30 AM</span>
+                                            <span class="message-count">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="message-preview">
+                                        <div class="message-avatar">
+                                            <img src="images/user2.jpg" alt="User Avatar">
+                                            <span class="status-dot offline"></span>
+                                        </div>
+                                        <div class="message-info">
+                                            <h4>Amit Kumar</h4>
+                                            <p>Thanks for the book! It was in great condition.</p>
+                                        </div>
+                                        <div class="message-meta">
+                                            <span class="message-time">Yesterday</span>
+                                        </div>
+                                    </div>
+                                    <div class="message-preview">
+                                        <div class="message-avatar">
+                                            <img src="images/user3.jpg" alt="User Avatar">
+                                            <span class="status-dot online"></span>
+                                        </div>
+                                        <div class="message-info">
+                                            <h4>Vikram Singh</h4>
+                                            <p>Can we meet tomorrow for the book exchange?</p>
+                                        </div>
+                                        <div class="message-meta">
+                                            <span class="message-time">Yesterday</span>
+                                            <span class="message-count">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <div class="message-user">
+                                        <img src="images/user1.jpg" alt="User Avatar">
+                                        <div>
+                                            <h3>Priya Patel</h3>
+                                            <span class="user-status">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="message-actions">
+                                        <button class="btn-icon"><i class="fas fa-phone"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-video"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-info-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="message-body">
+                                    <div class="message-date">Today</div>
+                                    <div class="message received">
+                                        <div class="message-bubble">
+                                            <p>Hi! I saw your listing for Calculus: Early Transcendentals. Is it still available for rent?</p>
+                                            <span class="message-time">10:15 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="message sent">
+                                        <div class="message-bubble">
+                                            <p>Yes, it's still available! Are you interested in renting it?</p>
+                                            <span class="message-time">10:18 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="message received">
+                                        <div class="message-bubble">
+                                            <p>Great! I need it for my calculus course this semester. How much is the rental fee and deposit?</p>
+                                            <span class="message-time">10:20 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="message received">
+                                        <div class="message-bubble">
+                                            <p>Also, what's the condition of the book? Any highlights or notes?</p>
+                                            <span class="message-time">10:21 AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-input">
+                                    <input type="text" placeholder="Type a message...">
+                                    <div class="message-input-actions">
+                                        <button class="btn-icon"><i class="fas fa-paperclip"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-image"></i></button>
+                                        <button class="btn-icon send"><i class="fas fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="profile-tab" id="settings">
+                        <h2>Account Settings</h2>
+                        <div class="settings-container">
+                            <div class="settings-section">
+                                <h3>Personal Information</h3>
+                                <form class="settings-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="full-name">Full Name</label>
+                                            <input type="text" id="full-name" value="Rahul Sharma">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" value="rahul.sharma@example.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" value="+91 9876543210">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="institution">Institution</label>
+                                            <input type="text" id="institution" value="Delhi University">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <textarea id="address" rows="3">123 College Road, North Campus, Delhi</textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Password</h3>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" id="current-password">

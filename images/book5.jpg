@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#f3f4f6"/>
+  <rect x="50" y="100" width="300" height="400" fill="#e5e7eb" rx="10" ry="10"/>
+  <text x="200" y="300" font-family="Arial" font-size="24" text-anchor="middle" fill="#6b7280">Data Structures and Algorithms</text>
+  <text x="200" y="340" font-family="Arial" font-size="18" text-anchor="middle" fill="#6b7280">by Robert Lafore</text>
+  <rect x="150" y="380" width="100" height="30" fill="#4f46e5" rx="5" ry="5"/>
+  <text x="200" y="400" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Textbook</text>
+</svg>

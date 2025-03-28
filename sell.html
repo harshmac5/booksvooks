@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Books - BooksVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Books<span>Vooks</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html" class="active">Sell</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Sell Your Books</h1>
+            <p>List your textbooks, notes, and novels for sale or rent</p>
+        </div>
+    </section>
+
+    <section class="sell-section">
+        <div class="container">
+            <div class="sell-container">
+                <div class="sell-card">
+                    <form class="sell-form">
+                        <div class="form-group">
+                            <label for="book-title">Book Title</label>
+                            <input type="text" id="book-title" placeholder="Enter the book title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="book-author">Author</label>
+                            <input type="text" id="book-author" placeholder="Enter the author's name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="book-category">Category</label>
+                            <select id="book-category" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="textbooks">Textbooks</option>
+                                <option value="notes">Notes & Study Materials</option>
+                                <option value="novels">Novels & Fiction</option>
+                                <option value="reference">Reference Books</option>
+                                <option value="entrance">Entrance Exam Books</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="book-condition">Condition</label>
+                            <select id="book-condition" required>
+                                <option value="" disabled selected>Select condition</option>
+                                <option value="new">New</option>
+                                <option value="like-new">Like New</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Listing Type</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="listing-type" value="sale" checked>
+                                    <span>For Sale</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="listing-type" value="rent">
+                                    <span>For Rent</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="listing-type" value="both">
+                                    <span>Both</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group sale-price-group">
+                            <label for="book-price">Sale Price (₹)</label>
+                            <input type="number" id="book-price" placeholder="Enter sale price" min="1" required>
+                        </div>
+                        
+                        <div class="form-group rent-price-group hidden">
+                            <label for="book-rent-price">Rent Price (₹/month)</label>
+                            <input type="number" id="book-rent-price" placeholder="Enter rent price per month" min="1">
+                        </div>
+                        
+                        <div class="form-group rent-deposit-group hidden">
+                            <label for="book-deposit">Security Deposit (₹)</label>
+                            <input type="number" id="book-deposit" placeholder="Enter security deposit amount" min="0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="book-description">Description</label>
+                            <textarea id="book-description" rows="4" placeholder="Provide details about the book, its condition, any highlights, etc." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Photos</label>
+                            <div class="upload-box">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Add at least 2 photos (Max 5)</span>
+                                <p>Drag & drop or click to upload</p>
+                            </div>
+                            <input type="file" id="book-photos" accept="image/*" multiple class="hidden">
+                            <div class="photo-preview"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="book-location">Location</label>
+                            <select id="book-location" required>
+                                <option value="" disabled selected>Select your location</option>
+                                <option value="north-campus">North Campus</option>
+                                <option value="south-campus">South Campus</option>
+                                <option value="east-campus">East Campus</option>
+                                <option value="west-campus">West Campus</option>
+                                <option value="off-campus">Off Campus</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-preference">Contact Preference</label>
+                            <select id="contact-preference" required>
+                                <option value="" disabled selected>Select contact preference</option>
+                                <option value="app-message">App Message</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="call">Phone Call</option>
+                                <option value="email">Email</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">List Book</button>
+                    </form>
+                </div>
+                
+                <div class="sell-tips">
+                    <h3>Tips for Selling</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Add clear photos from multiple angles</li>
+                        <li><i class="fas fa-check-circle"></i> Be honest about the condition</li>
+                        <li><i class="fas fa-check-circle"></i> Set a competitive price</li>
+                        <li><i class="fas fa-check-circle"></i> Respond quickly to inquiries</li>
+                        <li><i class="fas fa-check-circle"></i> Include details about highlights or notes</li>
+                    </ul>
+                    
+                    <div class="sell-faq">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <h4>How do I price my books?</h4>
+                            <p>Consider the original price, condition, demand, and check similar listings. Generally, used textbooks sell for 40-70% of the original price.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Is there a fee for listing?</h4>
+                            <p>No, listing your books on BooksVooks is completely free.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>How do I handle the exchange?</h4>
+                            <p>You can arrange to meet the buyer on campus or use our secure exchange points. Always prioritize safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Book<span>Vook</span></h2>
+                <p>Share Knowledge, Save Money</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="sell.html">Sell</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Email: contact@booksvooks.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BooksVooks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/sell.js"></script>
+</body>
+</html>

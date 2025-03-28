@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Books - BooksVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Books<span>Vooks</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="rent.html" class="active">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="rent-hero">
+        <div class="container">
+            <h1>Rent Books at a Fraction of the Cost</h1>
+            <p>Save money by renting textbooks, reference materials, and novels</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for books to rent...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="rent-benefits">
+        <div class="container">
+            <h2>Why Rent with BooksVooks?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Save Up to 70%</h3>
+                    <p>Rent textbooks for a fraction of the purchase price</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Rental Periods</h3>
+                    <p>Choose from monthly, semester, or yearly rental options</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>Protected deposits and verified student community</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>Simple process to return books when you're done</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to-rent">
+        <div class="container">
+            <h2>How to Rent Books</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Find Your Book</h3>
+                    <p>Search or browse through our collection of rentable books</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Choose Rental Period</h3>
+                    <p>Select how long you need the book for</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Meet & Exchange</h3>
+                    <p>Connect with the book owner and complete the transaction</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3>Return the Book</h3>
+                    <p>Return the book in good condition when the rental period ends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-rentals">
+        <div class="container">
+            <h2>Popular Books for Rent</h2>
+            <div class="book-grid">
+                <!-- Book Card 1 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book1.jpg" alt="Book cover">
+                        <div class="book-tag rent">For Rent</div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Calculus: Early Transcendentals</h3>
+                        <p class="book-author">James Stewart</p>
+                        <div class="book-meta">
+                            <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                            <span><i class="fas fa-map-marker-alt"></i> North Campus</span>
+                        </div>
+                        <p class="book-price">₹350/month</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book3.jpg" alt="Book cover">
+                        <div class="book-tag rent">For Rent</div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Physics for Scientists and Engineers</h3>
+                        <p class="book-author">Serway & Jewett</p>
+                        <div class="book-meta">
+                            <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                            <span><i class="fas fa-check-circle"></i> Good</span>
+                            <span><i class="fas fa-map-marker-alt"></i> South Campus</span>
+                        </div>
+                        <p class="book-price">₹400/month</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book5.jpg" alt="Book cover">
+                        <div class="book-tag rent">For Rent</div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Introduction to Psychology</h3>
+                        <p class="book-author">David G. Myers</p>
+                        <div class="book-meta">
+                            <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                            <span><i class="fas fa-check-circle"></i> Like New</span>
+                            <span><i class="fas fa-map-marker-alt"></i> East Campus</span>
+                        </div>
+                        <p class="book-price">₹300/month</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Book Card 4 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book6.jpg" alt="Book cover">
+                        <div class="book-tag rent">For Rent</div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Principles of Economics</h3>
+                        <p class="book-author">N. Gregory Mankiw</p>
+                        <div class="book-meta">
+                            <span><i class="fas fa-bookmark"></i> Textbooks</span>
+                            <span><i class="fas fa-check-circle"></i> Good</span>
+                            <span><i class="fas fa-map-marker-alt"></i> West Campus</span>
+                        </div>
+                        <p class="book-price">₹375/month</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(3.5)</span>
+                        </div>
+                        <a href="book-details.html" class="btn btn-primary view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="browse.html?type=rent" class="btn btn-secondary view-all">View All Rental Books</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="rental-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the rental process work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our rental process is simple: find a book you need, contact the owner through our platform, agree on rental terms, meet to exchange the book and security deposit, and return the book when the rental period ends.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if the book gets damaged?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You're responsible for returning the book in the same condition you received it. Minor wear is expected, but significant damage may result in partial or full loss of your security deposit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I extend my rental period?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can request an extension by contacting the book owner. If they agree, you can update the rental agreement and pay for the additional time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much is the security deposit?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Security deposits vary by book but typically range from 50-70% of the book's current market value. This deposit is fully refundable when you return the book in good condition.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if I return the book late?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Late returns may incur additional rental fees as specified in your rental agreement. It's important to communicate with the book owner if you need more time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have Books to Rent Out?</h2>
+                <p>Earn money by renting out your textbooks to other students</p>
+                <a href="sell.html" class="btn btn-primary">List Your Books</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Book<span>Vook</span></h2>
+                <p>Share Knowledge, Save Money</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="sell.html">Sell</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Email: contact@booksvooks.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BooksVooks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.fa-chevron-down');
+                
+                // Initially hide all answers
+                answer.style.maxHeight = '0';
+                answer.style.opacity = '0';
+                
+                question.addEventListener('click', function() {
+                    // Toggle current item
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    faqItems.forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                        faqItem.querySelector('.faq-answer').style.maxHeight = '0';
+                        faqItem.querySelector('.faq-answer').style.opacity = '0';
+                        faqItem.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                    });
+                    
+                    // Open current item if it was not active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

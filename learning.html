@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - BookVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .learning-hero {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .learning-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .learning-section {
+            padding: 60px 0;
+        }
+
+        .learning-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .category-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .search-section {
+            background: #f9fafb;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .search-box button {
+            padding: 12px 25px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background: var(--primary-dark);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .resource-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .resource-content {
+            padding: 20px;
+        }
+
+        .resource-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .resource-content p {
+            color: #6b7280;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .disclaimer {
+            background: #fff5f5;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Book<span>Vook</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="learning.html" class="active">Learning</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="learning-hero">
+        <div class="container">
+            <h1>Free Learning Resources</h1>
+            <p>Access a vast collection of open-source educational materials and e-books to enhance your knowledge.</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search for books, subjects, or topics...">
+                <button type="button"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <div class="learning-container">
+            <h2>Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>Programming, algorithms, and software development resources</p>
+                    <a href="#" class="btn btn-outline">Explore</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Science</h3>
+                    <p>Physics, chemistry, biology, and other scientific disciplines</p>
+                    <a href="#" class="btn btn-outline">Explore</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Mathematics</h3>
+                    <p>Algebra, calculus, statistics, and mathematical theories</p>
+                    <a href="#" class="btn btn-outline">Explore</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Literature</h3>
+                    <p>Classic literature, poetry, and contemporary works</p>
+                    <a href="#" class="btn btn-outline">Explore</a>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;">Featured Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <img src="images/book1.jpg" alt="Resource 1" class="resource-image">
+                    <div class="resource-content">
+                        <h3>Introduction to Python Programming</h3>
+                        <p>A comprehensive guide to Python programming language for beginners</p>
+                        <a href="#" class="btn btn-primary">Access Resource</a>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-users"></i> 10k+ readers</span>
+                            <span><i class="fas fa-star"></i> 4.5/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img src="images/book2.jpg" alt="Resource 2" class="resource-image">
+                    <div class="resource-content">
+                        <h3>Organic Chemistry Fundamentals</h3>
+                        <p>Learn the basics of organic chemistry with this comprehensive guide</p>
+                        <a href="#" class="btn btn-primary">Access Resource</a>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-users"></i> 8k+ readers</span>
+                            <span><i class="fas fa-star"></i> 4.3/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img src="images/book3.jpg" alt="Resource 3" class="resource-image">
+                    <div class="resource-content">
+                        <h3>World History: Ancient Civilizations</h3>
+                        <p>Explore the fascinating history of ancient civilizations</p>
+                        <a href="#" class="btn btn-primary">Access Resource</a>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-users"></i> 12k+ readers</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> The educational resources provided on this platform are sourced from various open-source repositories and public domain materials. We respect intellectual property rights and encourage users to verify the usage rights of materials before downloading or sharing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Book<span>Vook</span></h2>
+                <p>Share Knowledge, Save Money</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="sell.html">Sell</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Email: contact@bookvooks.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BookVooks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

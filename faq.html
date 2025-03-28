@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - BooksVooks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* FAQ Page Specific Styles */
+        .faq-hero {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .faq-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .faq-section {
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: #f9fafb;
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: #f3f4f6;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 1000px;
+        }
+        
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .contact-cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            background-color: #f3f4f6;
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Book<span>Vook</span></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="learning.html">Learning</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about BooksVooks</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="account">Account</button>
+                <button class="category-btn" data-category="buying">Buying</button>
+                <button class="category-btn" data-category="renting">Renting</button>
+                <button class="category-btn" data-category="selling">Selling</button>
+                <button class="category-btn" data-category="payment">Payment</button>
+            </div>
+            
+            <div class="faq-container">
+                <!-- Account FAQs -->
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <span>How do I create an account?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Creating an account is simple! Click on the "Sign Up" button in the top right corner of any page. Fill in your details including your name, email, and password. Verify your email address through the link we send you, and you're all set!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <span>Is my personal information secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we take data security very seriously. We use industry-standard encryption to protect your personal information. We never share your data with third parties without your consent. You can read more about our data practices in our <a href="privacy.html">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <span>How can I reset my password?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To reset your password, click on the "Forgot Password?" link on the login page. Enter your registered email address, and we'll send you a password reset link. Click the link in your email and follow the instructions to create a new password.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <span>How do I update my profile information?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Log in to your account and click on your profile icon. Select "Edit Profile" to update your personal information, contact details, and preferences. Don't forget to click "Save Changes" when you're done.</p>
+                    </div>
+                </div>
+                
+                <!-- Buying FAQs -->
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <span>How do I purchase a book?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To purchase a book, browse our listings or search for a specific title. When you find a book you want to buy, click on it to view details. Select the "Buy" option and click "Buy Now". You'll be prompted to arrange payment and delivery/pickup with the seller through our secure messaging system.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <span>What if the book I receive is not as described?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you receive a book that doesn't match the seller's description, please contact the seller directly through our messaging system within 48 hours of receiving the book. If you can't resolve the issue with the seller, our support team can help mediate the dispute. You can contact us at support@booksvooks.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <span>What delivery options are available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer several delivery options: in-person pickup (recommended for local transactions), standard shipping (5-7 business days), and express shipping (2-3 business days). The available options and costs will be displayed during checkout and may vary depending on your location and the seller's preferences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <span>Can I track my book delivery?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Once your book is shipped, you'll receive a tracking number via email and in your order details. You can track your package's status through our website or the courier's tracking system. We'll also send you notifications about important delivery updates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <span>What condition are the books in?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sellers must accurately describe their books' conditions using our standardized ratings: New, Like New, Very Good, Good, and Acceptable. Each listing includes detailed information about the book's condition, including any highlighting, notes, or wear. Photos of the actual book are also provided to help you make an informed decision.</p>
+                    </div>
+                </div>
+                
+                <!-- Renting FAQs -->
+                <div class="faq-item" data-category="renting">
+                    <div class="faq-question">
+                        <span>How does the book rental process work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Renting books is easy! Browse our rental listings and select a book you want to rent. Choose your preferred rental period (monthly, semester, or yearly). Pay the rental fee plus a refundable security deposit. After the rental period ends, return the book in good condition to get your deposit back.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="renting">
+                    <div class="faq-question">
+                        <span>What happens if I damage a rented book?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We understand that normal wear and tear happens during use. However, if a book is returned with significant damage (water damage, missing pages, broken spine, excessive highlighting), a portion or all of your security deposit may be withheld. The exact amount depends on the severity of the damage and will be determined by the book owner.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="renting">
+                    <div class="faq-question">
+                        <span>What are the available rental periods?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible rental periods to suit your needs: Monthly (30 days), Semester (4 months), and Yearly (12 months). You can also extend your rental period if needed by contacting the book owner through our messaging system before the rental period ends.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="renting">
+                    <div class="faq-question">
+                        <span>How much is the security deposit?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The security deposit typically ranges from 30% to 50% of the book's current market value. This amount is fully refundable when you return the book in good condition within the rental period. The exact deposit amount will be clearly shown before you complete the rental transaction.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="renting">
+                    <div class="faq-question">
+                        <span>Can I return a book before the rental period ends?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can return a book early! However, rental fees are calculated based on the initially selected rental period. For early returns, contact the book owner through our messaging system to arrange the return. Your security deposit will be refunded, but the rental fee remains the same.</p>
+                    </div>
+                </div>
+                
+                <!-- Selling FAQs -->
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <span>How do I list a book for sale or rent?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To list a book, click on "Sell" in the navigation menu. Fill out the listing form with details about your book including title, author, condition, and price. Upload clear photos of the book. Choose whether you want to list it for sale, rent, or both. Submit your listing, and it will be live on our platform after a quick review.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <span>How much should I charge for my books?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When setting your price, consider the book's original price, condition, demand, and edition. For textbooks, newer editions typically command higher prices. For rentals, monthly rates are usually 10-15% of the book's value. Browse similar listings to get an idea of competitive pricing. Remember that reasonably priced books tend to sell faster!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <span>What are the requirements for book photos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Upload clear, well-lit photos that accurately show the book's condition. Include pictures of: front and back covers, spine, any damage or wear, table of contents, and a sample page. Photos should be in focus and taken against a plain background. Good quality photos increase your chances of selling!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <span>How do I handle shipping and delivery?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can choose to offer shipping, in-person delivery, or both. For shipping, package the book securely to prevent damage. Use tracking services for security. You're responsible for shipping within 2 business days after receiving payment. For local transactions, arrange a safe public meeting place through our messaging system.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <span>What happens if a buyer claims the book is damaged?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If a buyer reports damage, they must provide photos within 48 hours of receiving the book. We'll review the case and compare with your listing photos. If the damage occurred during shipping, the shipping insurance will cover it. For disputes, our support team will mediate and help reach a fair resolution.</p>
+                    </div>
+                </div>
+                
+                <!-- Payment FAQs -->
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <span>What payment methods are accepted?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BooksVooks supports various payment methods including UPI, net banking, and major credit/debit cards. For in-person exchanges, cash payments are also an option. We recommend using our secure messaging system to arrange payment details with the other party.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <span>Does BooksVooks charge any fees?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BooksVooks charges a small service fee of 5% on each successful transaction to maintain our platform and provide secure services. This fee is automatically calculated and deducted from the final sale price. There are no fees for listing books or browsing the platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <span>How do refunds work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Refunds can be initiated within 48 hours of receiving a book if it doesn't match the listing description. For rental security deposits, refunds are processed within 3-5 business days after the book is returned in good condition. All refunds are sent back to the original payment method used for the transaction.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <span>Is my payment information secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we use industry-standard encryption and secure payment gateways to process all transactions. We never store your complete credit card information on our servers. All payment processing is handled by trusted third-party payment processors that comply with PCI DSS standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <span>When do I get paid for my book sales?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After a successful sale and delivery confirmation from the buyer, the payment (minus our service fee) will be transferred to your linked bank account within 5-7 business days. For rental income, payments are processed at the start of each rental period.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-cta">
+                <h3>Didn't find what you're looking for?</h3>
+                <p>Our support team is here to help with any other questions you might have.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Book<span>Vook</span></h2>
+                <p>Share Knowledge, Save Money</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="sell.html">Sell</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Email: contact@booksvooks.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BooksVooks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="300" viewBox="0 0 200 300">
+  <rect width="200" height="300" fill="#f0f0f0"/>
+  <rect x="20" y="20" width="160" height="260" fill="#fff" stroke="#ddd"/>
+  <text x="100" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">Organic</text>
+  <text x="100" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">Chemistry</text>
+  <text x="100" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#999">by Paula Y. Bruice</text>
+</svg>
